@@ -2,6 +2,7 @@ import { View, Text, TextInput, Button, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { Usuario } from '../Modelos/Usuario'
 import { useNavigation } from '@react-navigation/native';
+import { Link } from '@react-navigation/native';
 
 
   
@@ -59,6 +60,10 @@ const navigation = useNavigation();
             ></TextInput>
 
             <Button title='Iniciar Sesion' onPress={(e)=>login(nombre,contraseña)}></Button>
+            <Button
+        title="Registrarse"
+        onPress={() => navigation.navigate('RegistroUsuario' as never)}
+      />
         </View>
     )
 }
